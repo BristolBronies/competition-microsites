@@ -24,11 +24,13 @@ $palette: (
 	),
 	shade: (
 		white: #fff,
-		x-light: #eaeaee,
+		lightest: #fdfdfd,
+		lighter: #eaeaee,
 		light: #c7c7cc,
 		base: #727277,
-		dark: #424244,
-		x-dark: #202022,
-		black: #000
+		dark: #6e6e6e,
+		darker: #424244,
+		darkest: #202022,
+		black: #121212
 	)
 );

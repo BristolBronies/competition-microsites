@@ -75,5 +75,5 @@ gulp.task("images", function() {
 
 gulp.task("fonts", function() {
 	gulp.src(paths.fonts.src)
-	.pipe(paths.fonts.dst)
+	.pipe(gulp.dest(paths.fonts.dst))
 });

@@ -3,7 +3,7 @@
 // Global configuration settings
 date_default_timezone_set("Europe/London");
 define("COMPETITION_ID", "");
-define("COMPETITION_CLOSE", "2015-06-14 20:00:00");
+define("COMPETITION_CLOSE", "2015-06-14 23:59:00");
 define("FACEBOOK_APP_ID", "");
 define("ASSET_VERSION", "1.0.0");
 
@@ -12,10 +12,10 @@ $domain = $_SERVER["HTTP_HOST"];
 switch($domain) {
 	case "win.bristolbronies.dev":
 		define("DEBUG", true);
-		define("DB_HOST", "");
-		define("DB_NAME", "");
-		define("DB_USER", "");
-		define("DB_PASS", "");
+		define("DB_HOST", "localhost");
+		define("DB_NAME", "bristolbronies-win");
+		define("DB_USER", "root");
+		define("DB_PASS", "database");
 		break;
 	case "win.bristolbronies.co.uk":
 		define("DEBUG", false);
@@ -45,4 +45,16 @@ try {
 }
 catch(PDOException $e) {
 	echo $e->getMessage();
+}
+
+// Get user IP
+function clientIp() {
+	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+		$ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+		$ip = $_SERVER['REMOTE_ADDR'];
+	}
+	return $ip;
 }

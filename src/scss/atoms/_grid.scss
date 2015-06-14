@@ -1,0 +1,9 @@
+.grid {
+	width: 96%;
+	max-width: 560px;
+	margin-right: auto;
+	margin-left: auto;
+	&__row {
+		@include clearfix;
+	}
+}
