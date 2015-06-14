@@ -34,3 +34,13 @@ if(DEBUG) {
 else {
 	error_reporting(0);
 }
+
+// Database connection
+try {
+	$connection = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS);
+	$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+	echo $e->getMessage();
+}
