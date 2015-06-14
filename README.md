@@ -1,0 +1,1 @@
+This is the template code for the Bristol Bronies giveaway microsites. That's about it.
