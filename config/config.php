@@ -1,7 +1,9 @@
 <?php 
 
 // Global configuration settings
+date_default_timezone_set("Europe/London");
 define("COMPETITION_ID", "");
+define("COMPETITION_CLOSE", "2015-06-14 20:00:00");
 define("FACEBOOK_APP_ID", "");
 define("ASSET_VERSION", "1.0.0");
 
