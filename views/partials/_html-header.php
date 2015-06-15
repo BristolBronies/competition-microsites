@@ -18,7 +18,7 @@
 	<meta property="twitter:url" content="">
 	<meta property="twitter:site" content="@bristolbronies">
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:900|Source+Sans+Pro:400,700,400italic,700italic">
 	<link rel="stylesheet" href="dst/css/stylesheet.css?v=<?php echo ASSET_VERSION; ?>">
 	<!-- Preload javascript -->
 	<script src="dst/js/preload.js?v=<?php echo ASSET_VERSION; ?>"></script>
