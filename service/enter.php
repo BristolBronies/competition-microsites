@@ -8,7 +8,7 @@ header("Content-Type: application/json");
 function dataService($content) {
 	global $connection;
 	try {
-		$query = $connection->prepapre("INSERT INTO entrants(name, email, ip, competition) VALUES (:name, :email, :ip, :competition)");
+		$query = $connection->prepare("INSERT INTO entrants(name, email, ip, competition) VALUES (:name, :email, :ip, :competition)");
 		$query->execute(array(
 			"name" => $content[0][1],
 			"email" => $content[1][1],
@@ -47,10 +47,6 @@ if($data) {
 				$errors = true;
 				$return[] = array("form", "alreadyentered");
 			}
-		}
-		if($item[0] === "terms" && $item[1] !== "on") {
-			$errors = true;
-			$return[] = array($item[0], "required");
 		}
 		if($item[0] === "ip" || $item[0] === "email") {
 			$testIp = $connection->prepare("SELECT * FROM entrants WHERE ip = :ip AND competition = :competition LIMIT 1");

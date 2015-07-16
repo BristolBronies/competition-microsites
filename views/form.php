@@ -42,7 +42,7 @@
 			<strong>Hold it!</strong> You need JavaScript enabled in order to submit this form. Chances are you do and your internet borked. Try refreshing the page and trying again.
 		</noscript>
 
-		<form class="form form--completed" rel="form" id="form">
+		<form class="form" rel="form" id="form" method="POST" action="service/enter.php" data-form novalidate>
 			<header class="form__header">
 				<h1 class="form__title">Entry form</h1>
 			</header>

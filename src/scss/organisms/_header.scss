@@ -6,13 +6,12 @@
 	border-bottom: 1px solid palette(shade, light);
 	background-color: palette(shade, white);
 	&__branding {
-		display: none;
-		float: right;
+		text-align: center;
 		@include mq(tos, true) {
-			display: block;
+			float: right;
 		}
 		a {
-			display: block;
+			display: inline-block;
 			width: 50px;
 			height: 50px;
 			background-image: url("../images/logo.png");
@@ -24,10 +23,14 @@
 		}
 	}
 	&__tagline {
+		display: none;
 		margin-top: 15px;
 		margin-bottom: 15px;
 		float: left;
 		color: palette(shade, base);
 		line-height: 20px;
+		@include mq(tos, true) {
+			display: block;
+		}
 	}
 }
